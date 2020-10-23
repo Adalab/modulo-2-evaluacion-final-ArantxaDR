@@ -19,6 +19,7 @@ function getSeries(event) {
         tvSeries[i] = data[i].show;
 
         paintSeries();
+        listenSeries();
       }
     });
 }
@@ -26,14 +27,13 @@ function getSeries(event) {
 //Función para pintar las series//
 function paintSeries() {
   let showSeries = "";
-
-  for (const series of tvSeries) {
+  for (let i = 0; i < tvSeries.length; i++) {
     showSeries += `<div class="serie_container js-serie-container">`;
-    showSeries += `<p>${series.name}</p>`;
-    if (series.image === null) {
+    showSeries += `<p>${tvSeries[i].name}</p>`;
+    if (tvSeries[i].image === null) {
       showSeries += `<img  src= "//via.placeholder.com/210x295/ffffff/666666/?text=TV" alt="Show TV image"/>`;
     } else {
-      showSeries += `<img  src="${series.image.medium}" alt="Show TV image"/>`;
+      showSeries += `<img  src="${tvSeries[i].image.medium}" alt="Show TV image"/>`;
     }
     showSeries += "</div>";
   }
