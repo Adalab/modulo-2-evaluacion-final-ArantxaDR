@@ -26,7 +26,7 @@ function paintSeries() {
   let showSeries = "";
 
   for (const series of tvSeries) {
-    showSeries += "<div>";
+    showSeries += `<div class="serie_container">`;
     showSeries += `<p>${series.name}</p>`;
     if (series.image === null) {
       showSeries += `<img  src= "//via.placeholder.com/210x295/ffffff/666666/?text=TV" alt="Show TV image"/>`;

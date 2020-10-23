@@ -6,7 +6,6 @@ body {
 }
 .main {
   display: grid;
-
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   &_form {
@@ -14,10 +13,13 @@ body {
   }
   &_container {
     display: grid;
-    background-color: darkgray;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    column-gap: 5px;
+    gap: 3px;
     padding: 10px;
   }
+}
+.serie_container {
+  background-color: darkkhaki;
+  padding: 5px;
 }
