@@ -1,0 +1,1 @@
+body{background-color:darkgoldenrod}.header{text-align:center}.main{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr}.main_form{grid-column:1/2}.main_container{display:grid;grid-template-columns:repeat(4, 1fr);grid-template-rows:repeat(2, 1fr);gap:3px;padding:10px}.serie_container{background-color:darkkhaki;padding:5px}

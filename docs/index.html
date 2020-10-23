@@ -3,15 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="../scss/main.scss" />
+    <title>Evaluación Módulo 2</title>
+    <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
   <body>
-    <h1 class="js-title">Buscador de series</h1>
-    <form>
-      <input type="text" placeholder="Tronos" class="js-input" />
-      <button class="js-btn">Buscar</button>
-    </form>
-    <script type="text/javascript" src="../js/main.js"></script>
+    <header role="banner" class="header">
+      <h1 class="js-title">Buscador de series</h1>
+    </header>
+    <main role="main" class="main">
+      <form method="GET" role="form" class="main_form js-form">
+        <label for="text"></label>
+        <input
+          type="text"
+          placeholder="Busca tu serie favorita"
+          class="js-input input"
+          type="text"
+          id="text"
+          aria-label="input"
+          required
+          value=""
+        />
+
+        <button class="js-btn form__btn">Buscar</button>
+        <ul class="js-list"></ul>
+      </form>
+      <div class="js-tvSeries main_container"></div>
+    </main>
+    <script type="text/javascript" src="./assets/js/main.js"></script>
   </body>
 </html>
