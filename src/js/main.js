@@ -6,9 +6,9 @@ const btn = document.querySelector(".js-btn");
 
 function getSeries(event) {
   event.preventDefault();
-  console.log("llamada");
+
   const inputValue = document.querySelector(".js-input").value;
-  console.log(inputValue);
+
   fetch(`//api.tvmaze.com/search/shows?q="${inputValue}"`)
     .then((response) => {
       return response.json();
