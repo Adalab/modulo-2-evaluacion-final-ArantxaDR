@@ -15,11 +15,7 @@ function getSeries(event) {
     })
     .then(function (data) {
       for (let i = 0; i < data.length; i++) {
-        const serie = {
-          name: data[i].show.name,
-          img: data[i].show.image.medium,
-        };
-        tvSeries[i] = serie;
+        tvSeries[i] = data[i].show;
 
         paintSeries();
       }
@@ -28,10 +24,15 @@ function getSeries(event) {
 
 function paintSeries() {
   let showSeries = "";
+
   for (const series of tvSeries) {
     showSeries += "<div>";
     showSeries += `<p>${series.name}</p>`;
-    showSeries += `<img  src="${series.img}" alt="Show TV image"/>`;
+    if (series.image === null) {
+      showSeries += `<img  src= "//via.placeholder.com/210x295/ffffff/666666/?text=TV" alt="Show TV image"/>`;
+    } else {
+      showSeries += `<img  src="${series.image.medium}" alt="Show TV image"/>`;
+    }
     showSeries += "</div>";
   }
 
