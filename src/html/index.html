@@ -7,13 +7,33 @@
     <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
   <body>
-    <h1 class="js-title">Buscador de series</h1>
-    <form>
-      <input type="text" placeholder="Tronos" class="js-input" />
-      <button class="js-btn">Buscar</button>
-    </form>
-    <div class="js-drama"></div>
-    <ul class="js-list"></ul>
+    <header role="banner">
+      <h1 class="js-title">Buscador de series</h1>
+    </header>
+    <main role="main" class="main">
+      <form method="GET" role="form" class="form js-form">
+        <label for="text"></label>
+        <input
+          type="text"
+          placeholder="Busca tu serie favorita"
+          class="js-input"
+          type="text"
+          id="text"
+          aria-label="input"
+          required
+          value="game"
+          <!--quitar
+          antes
+          de
+          subir--
+        />
+        />
+
+        <button class="js-btn">Buscar</button>
+      </form>
+      <div class="js-tvSeries container"></div>
+      <ul class="js-list"></ul>
+    </main>
     <script type="text/javascript" src="./assets/js/main.js"></script>
   </body>
 </html>
