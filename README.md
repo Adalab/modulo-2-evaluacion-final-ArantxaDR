@@ -1,7 +1,7 @@
 Evaluación final módulo 2 JavaScript.
 
 [x]Llamar a la API de las series
-**[]Construir la url de búsqueda con el texto que ponga la usuaria en el campo de búsqueda
+**[x]Construir la url de búsqueda con el texto que ponga la usuaria en el campo de búsqueda
 **[]Filtrar por nombre
 []Pintar las series en la pantalla
 **[]Que se pinte una tarjeta con la imagen y el nombre
