@@ -1,4 +1,15 @@
-// .main {
-//   //   display: grid;
-//   //   grid-template-columns: 1rem 1rem;
-// }
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  &_form {
+    grid-column: 1/2;
+  }
+  &_container {
+    background-color: aqua;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 5px;
+  }
+}
