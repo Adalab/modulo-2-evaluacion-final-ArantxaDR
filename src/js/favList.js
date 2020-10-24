@@ -1,20 +1,19 @@
-// 'use strict';
+"use strict";
 
-// const favSeriesList = document.querySelector('.js-list');
+const favSeriesContainer = document.querySelector(".js-list");
 
-// function addFav() {
-//   let htmlList = '';
+function paintFav() {
+  let showList = "";
 
-//   for (const favItem of favseList) {
-//     htmlList += '<li>';
-//     htmlList += `<p>${tvSeries[i].name}</p>`;
-//     if (tvSeries[i].image === null) {
-//       htmlList += `<img  src= "//via.placeholder.com/210x295/ffffff/666666/?text=TV" alt="Show TV image"/>`;
-//     } else {
-//       htmlList += `<img  src="${tvSeries[i].image.medium}" alt="Show TV image"/>`;
-//     }
-//     htmlList += '</li>';
-//   }
-//   favSeriesList.innerHTML = htmlList;
-// }
-// addFav();
+  for (let i = 0; i < favList.length; i++) {
+    showList += `<li class="js-fav-item js-fav${i} fav_list_item">`;
+    showList += `<p>${favList[i].name}</p>`;
+    if (favList[i].image === null) {
+      showList += `<img  src= "//via.placeholder.com/210x295/ffffff/666666/?text=TV" alt="Show TV image"/>`;
+    } else {
+      showList += `<img  src="${favList[i].image.medium}" alt="Show TV image"/>`;
+    }
+    showList += "</li>";
+  }
+  favSeriesContainer.innerHTML = showList;
+}

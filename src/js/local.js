@@ -8,7 +8,6 @@ function getLocalStorage() {
   const getLocal = JSON.parse(localStorage.getItem("series"));
   if (getLocal !== null) {
     favList = getLocal;
-    //addFavourite();
   } else {
     favList = [];
   }

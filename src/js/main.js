@@ -21,8 +21,7 @@ function getSeries(event) {
         paintSeries();
         listenSeries();
         getLocalStorage();
-        // setLocalStorage();
-        //addFav();
+        paintFav();
       }
     });
 }
