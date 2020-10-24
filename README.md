@@ -8,9 +8,9 @@ Evaluación final módulo 2 JavaScript.
 **[x]En caso de no tener foto que salga una imagen alternativa
 
 []Seleccionar favoritas
-**[]Escuchar evento sobre cada serie
-**[]Identificar el elemento clicado
-**[]Guardar las favoritas en un array
+**[x]Escuchar evento sobre cada serie
+**[x]Identificar el elemento clicado
+**[x]Guardar las favoritas en un array
 **[]Listado en la parte izquierda de la pantalla bajo el formulario de búsqueda
 **[]añadir y quitar clase de favorito
 []Deben seguir apareciendo aunque se realice otra búsqueda
