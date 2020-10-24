@@ -11,23 +11,29 @@
       <h1 class="js-title">Buscador de series</h1>
     </header>
     <main role="main" class="main">
-      <form method="GET" role="form" class="main_form js-form">
-        <label for="text"></label>
-        <input
-          type="text"
-          placeholder="Busca tu serie favorita"
-          class="js-input input"
-          type="text"
-          id="text"
-          aria-label="input"
-          required
-          value=""
-        />
-
-        <button class="js-btn form__btn">Buscar</button>
+      <section>
+        <form method="GET" role="form" class="main_form js-form">
+          <label for="text"></label>
+          <input
+            type="text"
+            placeholder="Busca tu serie favorita"
+            class="js-input input"
+            type="text"
+            id="text"
+            aria-label="input"
+            required
+            value=""
+          />
+          <button class="js-btn form__btn">Buscar</button>
+        </form>
+      </section>
+      <section class="main_list">
+        <h4>Lista de favoritos</h4>
         <ul class="js-list"></ul>
-      </form>
-      <div class="js-tvSeries main_container"></div>
+      </section>
+      <section>
+        <div class="js-tvSeries main_container"></div>
+      </section>
     </main>
     <script type="text/javascript" src="./assets/js/main.js"></script>
   </body>

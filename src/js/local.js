@@ -1,16 +1,18 @@
-// "use strict";
+"use strict";
 
-// Serie Arrays
-// let browsedSeries = [];
+// Serie localStorage
+function setLocalStorage() {
+  localStorage.setItem("favList", JSON.stringify(favList));
+}
+function getLocalStorage() {
+  const getLocal = JSON.parse(localStorage.getItem("series"));
+  if (getLocal !== null) {
+    favList = getLocal;
+    //addFavourite();
+  } else {
+    favList = [];
+  }
+  console.log(favList);
+}
 
-// getSeriesFromLocal();
-
-// function getSeriesFromLocal() {
-//   const getLocal = JSON.parse(localStorage.getItem("series"));
-//   if (getLocal !== null) {
-//     favList = getLocal;
-//     addFavourite();
-//   } else {
-//     favList = [];
-//   }
-// }
+getLocalStorage();

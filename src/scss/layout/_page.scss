@@ -11,6 +11,9 @@ body {
   &_form {
     grid-column: 1/2;
   }
+  &_list {
+    grid-column: 1/2;
+  }
   &_container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

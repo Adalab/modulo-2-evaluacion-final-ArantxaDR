@@ -12,7 +12,7 @@ Evaluación final módulo 2 JavaScript.
 **[x]Identificar el elemento clicado
 **[x]Guardar las favoritas en un array
 **[]Listado en la parte izquierda de la pantalla bajo el formulario de búsqueda
-**[]añadir y quitar clase de favorito
+**[x]añadir y quitar clase de favorito
 []Deben seguir apareciendo aunque se realice otra búsqueda
 []LocalStorage
 Bonus
