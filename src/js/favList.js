@@ -14,10 +14,17 @@ function paintFav() {
     } else {
       showList += `<img  src="${favList[i].image.medium}" alt="Show TV image"/>`;
     }
-    showList += `<button class="fav_list_delete js-delete-btn"  title="Borrar">`;
+    showList += `<button class="fav_list_delete js-delete-btn" id="${i}" title="Borrar">`;
     showList += `<i class="fav_list_delete_icon fas fa-times"></i>`;
     showList += `</button>`;
     showList += "</li>";
   }
   favSeriesContainer.innerHTML = showList;
+}
+
+function listenerDelete() {
+  const deleteItems = document.querySelector(".js-delete-btn");
+  for (const deleteItem of deleteItems) {
+    deleteItem.addEventListener("click", favSeries);
+  }
 }

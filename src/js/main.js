@@ -9,6 +9,8 @@ function getSeries(event) {
   event.preventDefault();
 
   const inputValue = document.querySelector(".js-input").value;
+  getLocalStorage();
+  paintFav();
 
   fetch(`//api.tvmaze.com/search/shows?q="${inputValue}"`)
     .then((response) => {
@@ -20,8 +22,6 @@ function getSeries(event) {
 
         paintSeries();
         listenSeries();
-        getLocalStorage();
-        paintFav();
       }
     });
 }
