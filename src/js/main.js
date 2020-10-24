@@ -33,7 +33,10 @@ function paintSeries() {
   for (let i = 0; i < tvSeries.length; i++) {
     let classFav;
 
-    const favIndex = favList.indexOf(i);
+    const favSerie = favList.find((drama) => drama.id === tvSeries[i].id);
+
+    //const favIndex = favList.indexOf(i);
+    const favIndex = favList.indexOf(favSerie);
     const favotire = favIndex !== -1;
 
     if (favotire === true) {

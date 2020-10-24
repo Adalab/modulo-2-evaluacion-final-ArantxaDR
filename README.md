@@ -14,9 +14,8 @@ Evaluación final módulo 2 JavaScript.
 **[]Listado en la parte izquierda de la pantalla bajo el formulario de búsqueda
 **[x]añadir y quitar clase de favorito
 []Deben seguir apareciendo aunque se realice otra búsqueda
-[]LocalStorage
+[/]LocalStorage
 Bonus
 []Borrar favoritos
 **[]De pantalla uno a uno y del LocalStorage
 \*\*[]Con un botón para todos
-[]Que aparezca resaltada si ya está en favoritas
