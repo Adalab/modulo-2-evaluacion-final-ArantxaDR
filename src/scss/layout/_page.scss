@@ -31,3 +31,22 @@ body {
   background-color: rgba(87, 119, 82, 0.486);
   color: darkred;
 }
+.fav_list {
+  text-align: center;
+  list-style: none;
+  padding: 0px;
+
+  &_item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &_delete {
+    padding: 10px;
+    border: none;
+    background-color: yellow;
+    &_icon {
+      color: black;
+    }
+  }
+}
