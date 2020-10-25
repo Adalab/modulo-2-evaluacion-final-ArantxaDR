@@ -3,6 +3,8 @@
 let tvSeries = [];
 const tvContainer = document.querySelector(".js-tvSeries");
 const btn = document.querySelector(".js-btn");
+getLocalStorage();
+paintFav();
 
 //Función para recoger la info de las series//
 function getSeries(event) {
@@ -26,19 +28,35 @@ function getSeries(event) {
 //Función para pintar las series//
 function paintSeries() {
   let showSeries = "";
+  for (let i = 0; i < tvSeries.length; i++) {
+    let classFav;
 
-  for (const series of tvSeries) {
-    showSeries += `<div class="serie_container js-serie-container">`;
-    showSeries += `<p>${series.name}</p>`;
-    if (series.image === null) {
+    const favSerie = favList.find((drama) => drama.id === tvSeries[i].id);
+
+    //const favIndex = favList.indexOf(i);
+    const favIndex = favList.indexOf(favSerie);
+    const favotire = favIndex !== -1;
+
+    if (favotire === true) {
+      classFav = "serie_container_fav";
+    } else {
+      classFav = "";
+    }
+
+    showSeries += `<div class="serie_container ${classFav} js-serie-container" id="${i}">`;
+    showSeries += `<p>${tvSeries[i].name}</p>`;
+    if (tvSeries[i].image === null) {
       showSeries += `<img  src= "//via.placeholder.com/210x295/ffffff/666666/?text=TV" alt="Show TV image"/>`;
     } else {
-      showSeries += `<img  src="${series.image.medium}" alt="Show TV image"/>`;
+      showSeries += `<img  src="${tvSeries[i].image.medium}" alt="Show TV image"/>`;
     }
     showSeries += "</div>";
   }
 
   tvContainer.innerHTML = showSeries;
+  if (tvSeries.length > 0) {
+    listenSeries();
+  }
 }
 
 btn.addEventListener("click", getSeries);

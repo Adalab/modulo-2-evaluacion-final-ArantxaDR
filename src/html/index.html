@@ -4,30 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Evaluación Módulo 2</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    />
     <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
   <body>
-    <header role="banner" class="header">
-      <h1 class="js-title">Buscador de series</h1>
-    </header>
+    <include src="./partials/header.html"></include>
     <main role="main" class="main">
-      <form method="GET" role="form" class="main_form js-form">
-        <label for="text"></label>
-        <input
-          type="text"
-          placeholder="Busca tu serie favorita"
-          class="js-input input"
-          type="text"
-          id="text"
-          aria-label="input"
-          required
-          value=""
-        />
+      <section class="main_form">
+        <form method="GET" role="form" class="main_form_bar js-form">
+          <label for="text"></label>
+          <input
+            type="text"
+            placeholder="Busca tu serie favorita"
+            class="js-input form_input"
+            type="text"
+            id="text"
+            aria-label="input"
+            required
+            value=""
+          />
+          <button class="js-btn form_btn">Buscar</button>
+        </form>
+      </section>
 
-        <button class="js-btn form__btn">Buscar</button>
-        <ul class="js-list"></ul>
-      </form>
-      <div class="js-tvSeries main_container"></div>
+      <section class="main_list" role="list">
+        <h4 class="main_list_title">Lista de favoritos</h4>
+        <ul class="js-list fav_list"></ul>
+        <button class="list_all_button js-delete-all" title="Borrar todo">
+          Borrar todo
+        </button>
+      </section>
+      <section>
+        <div class="js-tvSeries main_container"></div>
+      </section>
     </main>
     <script type="text/javascript" src="./assets/js/main.js"></script>
   </body>
