@@ -21,7 +21,6 @@ function getSeries(event) {
         tvSeries[i] = data[i].show;
 
         paintSeries();
-        listenSeries();
       }
     });
 }
@@ -55,6 +54,9 @@ function paintSeries() {
   }
 
   tvContainer.innerHTML = showSeries;
+  if (tvSeries.length > 0) {
+    listenSeries();
+  }
 }
 
 btn.addEventListener("click", getSeries);

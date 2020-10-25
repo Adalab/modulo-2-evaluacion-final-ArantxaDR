@@ -14,7 +14,7 @@ const favSeries = function (ev) {
   }
   setLocalStorage();
   paintSeries();
-  listenSeries();
+
   paintFav();
 };
 //Función para seleccionar favoritas
