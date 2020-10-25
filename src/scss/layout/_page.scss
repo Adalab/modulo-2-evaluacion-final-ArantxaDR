@@ -1,5 +1,5 @@
 body {
-  background-color: darkgoldenrod;
+  background-color: darkolivegreen;
 }
 .header {
   text-align: center;
@@ -12,6 +12,15 @@ body {
     grid-column: 1/2;
   }
   &_list {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    margin-top: 10px;
+    padding: 20px;
+    border-radius: 50px;
+    background-color: darkmagenta;
+
     grid-column: 1/2;
   }
   &_container {
@@ -23,30 +32,43 @@ body {
   }
 }
 .serie_container {
-  background-color: darkkhaki;
+  border-radius: 10px;
+  background-color: mediumorchid;
   padding: 5px;
-  color: rgb(114, 41, 15);
+  color: black;
 }
 .serie_container_fav {
-  background-color: rgba(87, 119, 82, 0.486);
-  color: darkred;
+  background-color: mediumpurple;
+  color: whitesmoke;
 }
 .fav_list {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   list-style: none;
   padding: 0px;
 
   &_item {
-    display: flex;
     align-items: center;
-    justify-content: space-between;
   }
+
   &_delete {
-    padding: 10px;
+    text-decoration: none;
+    padding: 5px;
+    background-color: darkviolet;
+    border-radius: 6px;
     border: none;
-    background-color: yellow;
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      background-color: #ffffff;
+    }
     &_icon {
+      size: 15px;
       color: black;
+      font-weight: 600;
+      font-size: 20px;
     }
   }
 }

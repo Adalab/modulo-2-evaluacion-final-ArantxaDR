@@ -6,11 +6,11 @@ function removeFavourite(ev) {
   const clicked = favList[removeId];
 
   const indexFav = favList.indexOf(clicked);
-  const delFavorite = indexFav !== -1;
 
-  if (delFavorite === removeID) {
-    favList.splice(indexFav, 1);
-  }
+  setLocalStorage();
+  paintSeries();
+  listenerDelete();
+  paintFav();
 }
 
 //Botones de borrado
