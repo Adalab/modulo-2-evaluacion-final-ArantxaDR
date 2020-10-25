@@ -18,7 +18,7 @@ const favSeries = function (ev) {
   paintFav();
 
   if (favList.length > 0) {
-    listenerDelete();
+    // listenerDelete();
   }
 };
 //Función para seleccionar favoritas

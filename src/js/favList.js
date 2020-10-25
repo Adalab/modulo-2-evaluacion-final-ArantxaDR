@@ -21,10 +21,3 @@ function paintFav() {
   }
   favSeriesContainer.innerHTML = showList;
 }
-
-function listenerDelete() {
-  const deleteItems = document.querySelector(".js-delete-btn");
-  for (const deleteItem of deleteItems) {
-    deleteItem.addEventListener("click", favSeries);
-  }
-}

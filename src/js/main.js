@@ -3,14 +3,14 @@
 let tvSeries = [];
 const tvContainer = document.querySelector(".js-tvSeries");
 const btn = document.querySelector(".js-btn");
+getLocalStorage();
+paintFav();
 
 //Función para recoger la info de las series//
 function getSeries(event) {
   event.preventDefault();
 
   const inputValue = document.querySelector(".js-input").value;
-  getLocalStorage();
-  paintFav();
 
   fetch(`//api.tvmaze.com/search/shows?q="${inputValue}"`)
     .then((response) => {
