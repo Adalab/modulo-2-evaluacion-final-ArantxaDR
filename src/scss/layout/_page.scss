@@ -1,27 +1,28 @@
-body {
-  background-color: darkolivegreen;
-}
-.header {
-  text-align: center;
-}
 .main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   &_form {
+    margin-left: 25px;
     grid-column: 1/2;
   }
+
   &_list {
     display: flex;
+    color: mediumturquoise;
+    font-size: 20px;
+    margin-left: 5px;
+    width: fit-content;
     flex-direction: column;
-    width: 50%;
-    height: 100%;
     margin-top: 10px;
     padding: 20px;
     border-radius: 50px;
-    background-color: darkmagenta;
-
     grid-column: 1/2;
+    &_title {
+      color: dodgerblue;
+      font-style: oblique;
+      font-size: 20px;
+    }
   }
   &_container {
     display: grid;
@@ -29,16 +30,18 @@ body {
     grid-template-rows: repeat(2, 1fr);
     gap: 3px;
     padding: 10px;
+    font-size: 20px;
+    font-style: italic;
   }
 }
 .serie_container {
   border-radius: 10px;
-  background-color: mediumorchid;
+  background-color: lightblue;
   padding: 5px;
   color: black;
 }
 .serie_container_fav {
-  background-color: mediumpurple;
+  background-color: midnightblue;
   color: whitesmoke;
 }
 .fav_list {
@@ -46,29 +49,22 @@ body {
   flex-direction: column;
   justify-content: center;
   list-style: none;
-  padding: 0px;
+  padding: 5px;
 
   &_item {
     align-items: center;
   }
-
-  &_delete {
-    text-decoration: none;
-    padding: 5px;
-    background-color: darkviolet;
-    border-radius: 6px;
-    border: none;
-    &:focus {
-      outline: none;
-    }
-    &:hover {
-      background-color: #ffffff;
-    }
-    &_icon {
-      size: 15px;
-      color: black;
-      font-weight: 600;
-      font-size: 20px;
-    }
-  }
+}
+.form_btn {
+  width: 70px;
+  height: 30px;
+  outline: none;
+  border-radius: 50px;
+  background-color: midnightblue;
+  color: aliceblue;
+}
+.form_input {
+  outline: none;
+  height: 30px;
+  border-radius: 10px;
 }
