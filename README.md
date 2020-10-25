@@ -18,4 +18,4 @@ Evaluación final módulo 2 JavaScript.
 Bonus
 [x]Borrar favoritos
 **[x]De pantalla uno a uno y del LocalStorage
-\Con un botón para todos
+\*\*[x]Con un botón para todos

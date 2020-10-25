@@ -3,6 +3,8 @@
 let tvSeries = [];
 const tvContainer = document.querySelector(".js-tvSeries");
 const btn = document.querySelector(".js-btn");
+getLocalStorage();
+paintFav();
 
 //Función para recoger la info de las series//
 function getSeries(event) {
@@ -30,7 +32,10 @@ function paintSeries() {
   for (let i = 0; i < tvSeries.length; i++) {
     let classFav;
 
-    const favIndex = favList.indexOf(i);
+    const favSerie = favList.find((drama) => drama.id === tvSeries[i].id);
+
+    //const favIndex = favList.indexOf(i);
+    const favIndex = favList.indexOf(favSerie);
     const favotire = favIndex !== -1;
 
     if (favotire === true) {
@@ -40,7 +45,7 @@ function paintSeries() {
     }
 
     showSeries += `<div class="serie_container ${classFav} js-serie-container" id="${i}">`;
-    showSeries += `<p>${tvSeries[i].name}</p>`;
+    showSeries += `<p>${tvSeries[i].name}</p><i class=" heart fas fa-heart"></i>`;
     if (tvSeries[i].image === null) {
       showSeries += `<img  src= "//via.placeholder.com/210x295/ffffff/666666/?text=TV" alt="Show TV image"/>`;
     } else {
