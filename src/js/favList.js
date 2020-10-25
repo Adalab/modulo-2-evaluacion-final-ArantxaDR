@@ -20,4 +20,7 @@ function paintFav() {
     showList += "</li>";
   }
   favSeriesContainer.innerHTML = showList;
+  if (favList.length > 0) {
+    listenerDelete();
+  }
 }

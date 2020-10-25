@@ -11,7 +11,6 @@ function getLocalStorage() {
   } else {
     favList = [];
   }
-  console.log(favList);
 }
 
 getLocalStorage();

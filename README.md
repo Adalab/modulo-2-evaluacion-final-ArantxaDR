@@ -16,6 +16,6 @@ Evaluación final módulo 2 JavaScript.
 [x]Deben seguir apareciendo aunque se realice otra búsqueda
 [x]LocalStorage
 Bonus
-[]Borrar favoritos
-**[]De pantalla uno a uno y del LocalStorage
-\*\*[]Con un botón para todos
+[x]Borrar favoritos
+**[x]De pantalla uno a uno y del LocalStorage
+\*\*[x]Con un botón para todos

@@ -6,16 +6,16 @@ function removeFavourite(ev) {
   const clicked = favList[removeId];
 
   const indexFav = favList.indexOf(clicked);
+  favList.splice(indexFav, 1);
 
   setLocalStorage();
   paintSeries();
-  listenerDelete();
   paintFav();
 }
 
 //Botones de borrado
 function listenerDelete() {
-  const deleteItems = document.querySelector(".js-delete-btn");
+  const deleteItems = document.querySelectorAll(".js-delete-btn");
   for (const deleteItem of deleteItems) {
     deleteItem.addEventListener("click", removeFavourite);
   }
