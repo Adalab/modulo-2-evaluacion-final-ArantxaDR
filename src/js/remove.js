@@ -2,30 +2,27 @@
 
 // Quitar favoritas de la lista
 function removeFavourite(ev) {
-  const favSeriesId = parseInt(ev.currentTarget.id);
+  const removeId = parseInt(ev.currentTarget.id);
+  const clicked = favList[removeId];
 
-  const foundSeires = favList.find(
-    (currentSeries) => currentSeries.id === favSeriesId
-  );
+  const indexFav = favList.indexOf(clicked);
+  const delFavorite = indexFav !== -1;
 
-  const favIndex = favSeries.indexOf(foundSeires);
-  favSeries.splice(favIndex, 1);
-  localStorage.setItem(`favSeries`, JSON.stringify(favList));
-
-  ev.preventDefault;
-
-  paintFav();
-  getSeries();
-  //   listenerDelete();
+  if (delFavorite === removeID) {
+    favList.splice(indexFav, 1);
+  }
 }
+
 //Botones de borrado
-// function listenerDelete() {
-//   const deleteItems = document.querySelector(".js-delete-btn");
-//   for (const deleteItem of deleteItems) {
-//     deleteItem.addEventListener("click", removeFavourite);
-//   }
-// }
+function listenerDelete() {
+  const deleteItems = document.querySelector(".js-delete-btn");
+  for (const deleteItem of deleteItems) {
+    deleteItem.addEventListener("click", removeFavourite);
+  }
+}
+
 //Botón de borrar todo
+
 const deleteAllBtn = document.querySelector(".js-delete-all");
 
 function deleteAll() {
