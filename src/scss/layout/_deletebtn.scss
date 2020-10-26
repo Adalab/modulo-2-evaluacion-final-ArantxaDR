@@ -8,12 +8,14 @@
   color: #003b6f;
   text-transform: uppercase;
   font-weight: bolder;
+
   &:focus {
     outline: none;
   }
   &:hover {
     background-color: #003b6f;
     color: aliceblue;
+    transform: rotateX(0deg) translateY(-10%);
   }
 }
 .fav_list_delete {
@@ -28,6 +30,7 @@
   }
   &:hover {
     background-color: aliceblue;
+    transform: scale3d(0.7);
   }
   &_icon {
     size: 20px;
