@@ -1,5 +1,7 @@
 "use strict";
 let favList = [];
+
+//Favourite series array//
 const favSeries = function (ev) {
   const clickedId = parseInt(ev.currentTarget.id);
   const clicked = tvSeries[clickedId];
@@ -17,7 +19,7 @@ const favSeries = function (ev) {
 
   paintFav();
 };
-//Función para seleccionar favoritas
+//Listener to select series//
 function listenSeries() {
   const seriesItems = document.querySelectorAll(".js-serie-container");
   for (const seriesItem of seriesItems) {

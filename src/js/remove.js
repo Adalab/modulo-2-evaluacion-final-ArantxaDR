@@ -1,6 +1,6 @@
 "use strict";
 
-// Quitar favoritas de la lista
+// REmove favourites from the list//
 function removeFavourite(ev) {
   const removeId = parseInt(ev.currentTarget.id);
   const clicked = favList[removeId];
@@ -13,7 +13,7 @@ function removeFavourite(ev) {
   paintFav();
 }
 
-//Botones de borrado
+//Delete btns one by one//
 function listenerDelete() {
   const deleteItems = document.querySelectorAll(".js-delete-btn");
   for (const deleteItem of deleteItems) {
@@ -21,7 +21,7 @@ function listenerDelete() {
   }
 }
 
-//Botón de borrar todo
+//Delete all btn//
 
 const deleteAllBtn = document.querySelector(".js-delete-all");
 
