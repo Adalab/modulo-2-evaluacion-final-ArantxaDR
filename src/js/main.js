@@ -44,6 +44,7 @@ function paintSeries() {
 
     showSeries += `<div class="serie_container ${classFav} js-serie-container" id="${i}">`;
     showSeries += `<p>${tvSeries[i].name}</p>`;
+    showSeries += `<p>${tvSeries[i].status}</p>`;
     if (tvSeries[i].image === null) {
       showSeries += `<img class ="img_main" src= "//via.placeholder.com/210x295/ffffff/666666/?text=TV" alt="Show TV image"/>`;
     } else {

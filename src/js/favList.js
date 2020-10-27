@@ -24,3 +24,12 @@ function paintFav() {
     listenerDelete();
   }
 }
+
+const logBtn = document.querySelector(".js-log-btn");
+function log(ev) {
+  ev.preventDefault();
+  for (let i = 0; i < favList.length; i++) {
+    console.log(favList[i].name);
+  }
+}
+logBtn.addEventListener("click", log);
